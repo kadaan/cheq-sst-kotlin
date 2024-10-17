@@ -1,0 +1,20 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jetpack-io/devbox/0.10.1/.schema/devbox.schema.json",
+    "packages": [
+        "android-studio-tools@11076708",
+        "jdk@17.0.10"
+    ],
+    "env": {
+        "ANDROID_HOME": "${DEVBOX_PROJECT_ROOT}/.runtime/android-sdk",
+        "ANDROID_SDK_ROOT": "${DEVBOX_PROJECT_ROOT}/.runtime/android-sdk",
+        "ANDROID_USER_HOME": "${DEVBOX_PROJECT_ROOT}/.runtime/android-sdk",
+        "ANDROID_AVD_HOME": "${DEVBOX_PROJECT_ROOT}/.runtime/android-sdk/avd"
+    },
+    "shell": {
+        "scripts": {
+            "build": [
+                "$DEVBOX_PROJECT_ROOT/build.sh \"$@\""
+            ]
+        }
+    }
+}

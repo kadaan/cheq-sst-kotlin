@@ -1,0 +1,4 @@
+#Wed Oct 16 18:04:21 PDT 2024
+base.0=/source/work/cheq-sst-kotlin/sample-app/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

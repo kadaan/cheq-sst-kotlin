@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.6.1" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.color.red_900"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="10"
+            column="12"
+            startOffset="377"
+            endLine="10"
+            endColumn="26"
+            endOffset="391"/>
+        <location id="R.style.Theme_SST_Actionbar"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="17"
+            column="12"
+            startOffset="756"
+            endLine="17"
+            endColumn="38"
+            endOffset="782"/>
+        <location id="R.string.required"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="13"
+            column="13"
+            startOffset="600"
+            endLine="13"
+            endColumn="28"
+            endOffset="615"/>
+        <location id="R.string.include_data_layer"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="22"
+            column="13"
+            startOffset="1048"
+            endLine="22"
+            endColumn="38"
+            endOffset="1073"/>
+        <location id="R.color.purple_200"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="29"
+            endOffset="79"/>
+        <entry
+            name="model"
+            string="attr[colorPrimary(R),actionBarSize(R),colorOnSurface(R),colorPrimaryVariant(R),colorError(R)],color[blue_200(U),teal_700(U),purple_200(D),purple_500(U),purple_700(U),teal_200(U),black(U),white(U),red_900(D)],dimen[dim320dp(U)],drawable[border(U),ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R),ic_nav_drawer_menu_24dp(U)],id[drawer_layout(U),toolbar(U),example_pager(D),navigation_view(U),client_layout(U),client_label(U),client(U),domain_layout(U),domain_label(U),domain(U),publish_path_layout(U),publish_path_label(U),publish_path(U),nexus_host_layout(U),nexus_host_label(U),nexus_host(U),data_layer_name_layout(U),data_layer_name_label(U),data_layer_name(U),models_layout(U),models_label(U),models_controls_layout(U),include_custom_model(U),include_advertising_model(U),options_layout(U),options_label(U),options_controls_layout(U),enable_debug(U),data_layer_layout(U),data_layer_label(U),data_layer_controls_layout(U),populate_data_layer(U),clear_data_layer(U),tab_layout(U),pager_scroll_view(U),pager(U),mobile_data_layout(U),mobile_data_label(U),mobile_data(U),mobile_data_scrollview(U),refresh(U),guideline(U),event_type_layout(U),event_type_label(U),event_type(U),switch_layout(U),output_geo(U),cheq_uuid_layout(U),cheq_uuid_label(U),cheq_uuid(U),cheq_uuid_clear(U),request_layout(U),request_label(U),request(U),request_scrollview(U),response_layout(U),response_label(U),response(U),response_scrollview(U),send(U),nav_drawer_examples_group(U)],layout[activity_example(U),fragment_basic_send_event_configure(U),fragment_basic_send_event_example(U),fragment_basic_send_event_mobile_data(U),fragment_basic_send_event_send(U)],menu[example_drawer_menu(U)],mipmap[_ic_launcher(U),_ic_launcher_round(U)],string[app_name(U),client(U),domain(U),publish_path(U),nexus_host(U),data_layer_name(U),models(U),include_custom_model(U),include_advertising_model(U),options(U),enable_debug(U),data_layer(U),populate(U),clear(U),mobile_data(U),refresh(U),event_type(U),output_geo(U),cheq_uuid(U),request(U),response(U),send(U),send_event(U),configure(U),kotlin_basic_send_event(U),java_basic_send_event(U),required(D),include_data_layer(D),launch_count(U)],style[Theme_SST(U),ThemeOverlay_AppCompat_ActionBar(R),Theme_MaterialComponents_DayNight_NoActionBar(R),Theme_SST_Actionbar(D),Theme_MaterialComponents_DayNight(E)],xml[data_extraction_rules(U),backup_rules(U)];f^5,11^12,51^0^1^77^15^56,52^1a^5a^18^1d^5b^1b^20^5c^1e^23^5d^21^26^5e^24^5f^28^60^61^27^62^2d^63^2c^64^30^65^66,53^6^35,54^3a^67^2^f^39^68^38,55^2^69^40^3f^3e^6a^41^45^6b^f^46^44^43^49^6c^48^3d^47^4d^6d^4c^6e,57^10^11,58^10^11,76^78^8^9^c^a^6^b^3,79^7a^8^9^c^a^6^b^3;;;"/>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="ai.cheq.sst.android.sample.app.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+
+</incidents>

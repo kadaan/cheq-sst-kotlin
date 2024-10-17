@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "ai.cheq.sst.android.app-mergeDebugResources-37:/layout/fragment_basic_send_event_example.xml",
+        "source": "ai.cheq.sst.android.app-main-40:/layout/fragment_basic_send_event_example.xml"
+    },
+    {
+        "merged": "ai.cheq.sst.android.app-mergeDebugResources-37:/layout/fragment_basic_send_event_configure.xml",
+        "source": "ai.cheq.sst.android.app-main-40:/layout/fragment_basic_send_event_configure.xml"
+    },
+    {
+        "merged": "ai.cheq.sst.android.app-mergeDebugResources-37:/layout/fragment_basic_send_event_send.xml",
+        "source": "ai.cheq.sst.android.app-main-40:/layout/fragment_basic_send_event_send.xml"
+    },
+    {
+        "merged": "ai.cheq.sst.android.app-mergeDebugResources-37:/layout/fragment_basic_send_event_mobile_data.xml",
+        "source": "ai.cheq.sst.android.app-main-40:/layout/fragment_basic_send_event_mobile_data.xml"
+    },
+    {
+        "merged": "ai.cheq.sst.android.app-mergeDebugResources-37:/layout/activity_example.xml",
+        "source": "ai.cheq.sst.android.app-main-40:/layout/activity_example.xml"
+    }
+]

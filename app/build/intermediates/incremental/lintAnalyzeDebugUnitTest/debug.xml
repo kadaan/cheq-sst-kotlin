@@ -1,0 +1,28 @@
+<variant
+    name="debug"
+    package="ai.cheq.sst.android.app"
+    minSdkVersion="34"
+    targetSdkVersion="34"
+    debuggable="true"
+    mergedManifest="build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml"
+    partialResultsDir="build/intermediates/unit_test_lint_partial_results/debug/lintAnalyzeDebugUnitTest/out"
+    desugaredMethodsFiles="/Users/joelbaranick/.gradle/caches/8.10.2/transforms/f94eaa458b61ec541bec49fdad5d1449/transformed/desugar_jdk_libs_configuration-2.1.2-desugar-lint.txt:/Users/joelbaranick/.gradle/caches/8.10.2/transforms/f5f61efd70bb3dfe44bd32351ef56c4e/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      coreLibraryDesugaring="true"
+      viewBinding="true"
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+  </sourceProviders>
+  <testSourceProviders>
+    <sourceProvider
+        manifests="src/test/AndroidManifest.xml"
+        javaDirectories="src/test/java:src/testDebug/java:src/test/kotlin:src/testDebug/kotlin"
+        assetsDirectories="src/test/assets:src/testDebug/assets"
+        unitTest="true"/>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      type="UNIT_TEST">
+  </artifact>
+</variant>
