@@ -64,20 +64,17 @@
   <div class="breadcrumbs"><a href="../../index.html">Advertising Model</a><span class="delimiter">/</span><a href="../index.html">ai.cheq.sst.android.models.advertising</a><span class="delimiter">/</span><span class="current">AdvertisingModel</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Advertising</span><wbr><span><span>Model</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":models:advertising:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AdvertisingModel</a> : <a href="../../../../core/ai.cheq.sst.android.core.models/-model/index.html">Model</a><span class="token operator">&lt;</span><a href="-data/index.html">AdvertisingModel.Data</a><span class="token operator">&gt; </span></div><p class="paragraph">Model for collecting advertising ID and related information such as the limit ad tracking setting.</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import android.content.Context
-import androidx.test.core.app.ApplicationProvider
-import ai.cheq.sst.android.core.Config
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":models:advertising:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AdvertisingModel</a> : <a href="../../../../core/ai.cheq.sst.android.core.models/-model/index.html">Model</a><span class="token operator">&lt;</span><a href="-data/index.html">AdvertisingModel.Data</a><span class="token operator">&gt; </span></div><p class="paragraph">Model for collecting advertising ID and related information such as the limit ad tracking setting.</p><h4 class="">Samples</h4><div class="sample-container"><pre><code class="runnablesample monospace block lang-kotlin" theme="idea">import ai.cheq.sst.android.core.Config
 import ai.cheq.sst.android.core.Sst
 import ai.cheq.sst.android.core.models.Models
 import ai.cheq.sst.android.models.advertising.AdvertisingModel
-import kotlinx.coroutines.test.runTest
-import org.junit.Before
-import org.robolectric.RobolectricTestRunner
 
 fun main() { 
    //sampleStart 
-   val config = Config("my-client", models = Models(AdvertisingModel()))
-            Sst.configure(config) { context } 
+   runBlocking {
+            val config = Config("my-client", models = Models(AdvertisingModel()))
+            Sst.configure(config) { context }
+        } 
    //sampleEnd
 }</code></pre></div></div></div>
   </div>
