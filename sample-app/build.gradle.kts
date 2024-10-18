@@ -9,6 +9,7 @@ plugins {
 }
 
 plugins.withId("base") {
+    println("=========> ${project.name} plugins.withId(\"base\")")
     val buildTask = tasks.named(BUILD_TASK_NAME).callSubprojectTasks(BUILD_TASK_NAME)
     tasks.named(CHECK_TASK_NAME).callSubprojectTasks(CHECK_TASK_NAME)
     tasks.named(CLEAN_TASK_NAME).callSubprojectTasks(CLEAN_TASK_NAME)
