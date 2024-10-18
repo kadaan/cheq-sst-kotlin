@@ -1,3 +1,6 @@
+import java.net.URI
+import java.util.Properties
+
 pluginManagement {
     repositories {
         google {
@@ -20,8 +23,40 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://jitpack.io")
         mavenLocal()
+        val mavenCentralDeploymentVersion = findOptionalLocalProperty("maven.central.deployment.version")
+        if (mavenCentralDeploymentVersion != null) {
+            val mavenCentralBearerToken = findOptionalLocalProperty("maven.central.deployment.bearer.token")!!
+            maven {
+                name = "mavenCentralDeploymentTesting"
+                url = URI("https://central.sonatype.com/api/v1/publisher/deployments/download/")
+                credentials(HttpHeaderCredentials::class.java) {
+                    name = "Authorization"
+                    value = "Bearer $mavenCentralBearerToken"
+                }
+                authentication {
+                    create<HttpHeaderAuthentication>("header")
+                }
+                content {
+                    @Suppress("UnstableApiUsage") includeGroupAndSubgroups(
+                        providers.gradleProperty("project.group").get()
+                    )
+                }
+            }
+        }
     }
 }
 
 rootProject.name = "cheq-sst-kotlin-sample-app"
 include(":app")
+
+private fun findOptionalLocalProperty(propertyName: String): String? =
+    properties(rootDir, "local.properties").getProperty(propertyName)
+
+private fun properties(rootDir: File?, name: String): Properties {
+    return rootDir?.resolve(name)?.let {
+        when {
+            it.exists() -> Properties().apply { it.reader().use(::load) }
+            else -> properties(rootDir.parentFile, name)
+        }
+    } ?: Properties()
+}

@@ -1,4 +1,20 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
+
+//val mavenCentralDeploymentVersion = findOptionalLocalProperty("maven.central.deployment.version")
+//fun DependencyHandlerScope.foo(group: String, name: String) {
+//    if (mavenCentralDeploymentVersion != null) {
+//        println("Substituting $group:$name with $group:$name:$mavenCentralDeploymentVersion")
+//        implementation(group, name) {
+//            version {
+//                strictly(mavenCentralDeploymentVersion)
+//            }
+//        }
+//    } else {
+//        println("Substituting $group:$name with project(:$name)")
+//        implementation(project(":$name"))
+//    }
+//}
 
 plugins {
     alias(libs.plugins.android.application)
@@ -7,6 +23,14 @@ plugins {
 }
 
 dependencies {
+//    foo("ai.cheq.sst.android", "cheq-sst-kotlin")
+//    foo("ai.cheq.sst.android", "cheq-sst-kotlin-advertising")
+////    implementation("ai.cheq.sst.android", "cheq-sst-kotlin") {
+////        version {
+////            strictly("1234")
+////        }
+////    }
+////    implementation("ai.cheq.sst.android", "cheq-sst-kotlin-advertising", "1234")
     implementation(libs.cheq.sst.kotlin.core)
     implementation(libs.cheq.sst.kotlin.advertising)
     implementation(libs.androidx.appcompat)
@@ -81,3 +105,15 @@ android {
         }
     }
 }
+
+//private fun findOptionalLocalProperty(propertyName: String): String? =
+//    properties(rootDir, "local.properties").getProperty(propertyName)
+//
+//private fun properties(rootDir: File?, name: String): Properties {
+//    return rootDir?.resolve(name)?.let {
+//        when {
+//            it.exists() -> Properties().apply { it.reader().use(::load) }
+//            else -> properties(rootDir.parentFile, name)
+//        }
+//    } ?: Properties()
+//}

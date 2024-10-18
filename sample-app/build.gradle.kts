@@ -28,7 +28,7 @@ private fun <T: Task> TaskProvider<T>.callSubprojectTasks(vararg dependOnTasks: 
         }
         this.project.subprojects.forEach { project ->
             for (dependOnTask in dependOnTasks) {
-                 project.tasks.findByName(dependOnTask)?.let {
+                project.tasks.findByName(dependOnTask)?.let {
                     dependsOn(it)
                     mustRunAfter(it)
                 }
