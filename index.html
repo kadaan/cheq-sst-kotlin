@@ -46,7 +46,7 @@
                     </a>
             </div>
             <div class="library-version">
-0.0.2            </div>
+0.0.1            </div>
         </div>
     </div>
     <div class="navigation-controls">
@@ -65,7 +65,35 @@
     <div class="cover ">
       <h2 class="">Getting Started</h2>
       <h3 class="">Installation</h3>
-      <p class="paragraph">TBD</p>
+      <ol>
+        <li>
+          <p class="paragraph">Open build.gradle.kts file</p>
+        </li>
+        <li>
+          <p class="paragraph">Ensure the following is included in the repositories block:</p>
+          <div class="sample-container">
+            <pre><code class="block lang-kotlin" theme="idea"> repositories {<br>     mavenCentral()<br> }</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+              <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+            </span></div>
+        </li>
+        <li>
+          <p class="paragraph">Add the following dependency is included in the dependencies block:</p>
+          <div class="sample-container">
+            <pre><code class="block lang-kotlin" theme="idea"> dependencies {<br>     implementation(&quot;ai.cheq.sst.android:cheq-sst-kotlin:latest.release&quot;)<br> }</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+              <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+            </span></div>
+        </li>
+        <li>
+          <p class="paragraph">Optionally include additional dependencies in the dependencies block:</p>
+          <div class="sample-container">
+            <pre><code class="block lang-kotlin" theme="idea"> dependencies {<br>     implementation(&quot;ai.cheq.sst.android:cheq-sst-kotlin-advertising:latest.release&quot;)<br> }</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+              <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+            </span></div>
+        </li>
+      </ol>
       <h3 class="">Usage</h3>
       <h4 class="">Configure</h4>
       <p class="paragraph">To use the Android Server-Side Tagging (SST) SDK it must be configured by calling the <code class="lang-kotlin">Sst.configure</code> method.<br>This method takes a <code class="lang-kotlin">Config</code> object and a <code class="lang-kotlin">ContextProvider</code> as parameters. The <code class="lang-kotlin">Config</code> object is used to configure the SDK with the necessary information to send events to the server. The <code class="lang-kotlin">ContextProvider</code> is used to provide the SDK with the android context used to extract the necessary information to enrich the events.</p>
