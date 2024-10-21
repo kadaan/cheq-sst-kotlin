@@ -23,23 +23,27 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://jitpack.io")
         mavenLocal()
-        val mavenCentralDeploymentVersion = findOptionalLocalProperty("maven.central.deployment.version")
-        if (mavenCentralDeploymentVersion != null) {
-            val mavenCentralBearerToken = findOptionalLocalProperty("maven.central.deployment.bearer.token")!!
-            maven {
-                name = "mavenCentralDeploymentTesting"
-                url = URI("https://central.sonatype.com/api/v1/publisher/deployments/download/")
-                credentials(HttpHeaderCredentials::class.java) {
-                    name = "Authorization"
-                    value = "Bearer $mavenCentralBearerToken"
-                }
-                authentication {
-                    create<HttpHeaderAuthentication>("header")
-                }
-                content {
-                    @Suppress("UnstableApiUsage") includeGroupAndSubgroups(
-                        providers.gradleProperty("project.group").get()
-                    )
+        if (gradle.parent == null) {
+            val mavenCentralDeploymentVersion =
+                findOptionalLocalProperty("maven.central.deployment.version")
+            if (mavenCentralDeploymentVersion != null) {
+                val mavenCentralBearerToken =
+                    findOptionalLocalProperty("maven.central.deployment.bearer.token")!!
+                maven {
+                    name = "mavenCentralDeploymentTesting"
+                    url = URI("https://central.sonatype.com/api/v1/publisher/deployments/download/")
+                    credentials(HttpHeaderCredentials::class.java) {
+                        name = "Authorization"
+                        value = "Bearer $mavenCentralBearerToken"
+                    }
+                    authentication {
+                        create<HttpHeaderAuthentication>("header")
+                    }
+                    content {
+                        @Suppress("UnstableApiUsage") includeGroupAndSubgroups(
+                            providers.gradleProperty("project.group").get()
+                        )
+                    }
                 }
             }
         }
